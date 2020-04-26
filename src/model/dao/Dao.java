@@ -20,8 +20,8 @@ public class Dao {
 	private Connection yhdista(){
     	Connection con = null;    	
     	String path = System.getProperty("catalina.base");    	
-    	path = path.substring(0, path.indexOf(".metadata")).replace("\\", "/"); //Eclipsessa
-    	//path += "/webapps/"; //Tuotannossa. Laita tietokanta webapps-kansioon
+    	path = path.substring(0, path.indexOf(".metadata")).replace("\\", "/"); 
+    	
     	String url = "jdbc:sqlite:"+path+db;    	
     	try {	       
     		Class.forName("org.sqlite.JDBC");
@@ -39,10 +39,10 @@ public class Dao {
 		sql = "SELECT * FROM asiakkaat";       
 		try {
 			con=yhdista();
-			if(con!=null){ //jos yhteys onnistui
+			if(con!=null){ 
 				stmtPrep = con.prepareStatement(sql);        		
         		rs = stmtPrep.executeQuery();   
-				if(rs!=null){ //jos kysely onnistui
+				if(rs!=null){ 
 					//con.close();					
 					while(rs.next()){
 						Asiakas asiakas = new Asiakas();
