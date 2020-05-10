@@ -11,9 +11,9 @@ public class Asiakas {
 	}
 	
 
-	public Asiakas(int asiakas_id, String etunimi, String sukunimi, String puhelin, String sposti) {
+	public Asiakas(String etunimi, String sukunimi, String puhelin, String sposti) {
 		super();
-		this.asiakas_id = asiakas_id;
+		//this.asiakas_id = asiakas_id;
 		this.etunimi = etunimi;
 		this.sukunimi = sukunimi;
 		this.puhelin = puhelin;
