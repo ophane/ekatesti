@@ -48,7 +48,8 @@ public class Asiakkaat extends HttpServlet {
 			JSON.put("etunimi", asiakas.getEtunimi());
 			JSON.put("sukunimi", asiakas.getSukunimi());
 			JSON.put("puhelin", asiakas.getPuhelin());
-			JSON.put("sposti", asiakas.getSposti());	
+			JSON.put("sposti", asiakas.getSposti());
+			JSON.put("asiakas_id", asiakas_id);
 			strJSON = JSON.toString();	
 			}
 		}
